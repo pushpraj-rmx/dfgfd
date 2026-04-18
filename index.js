@@ -15,7 +15,11 @@ connectDb()
 app.use(express.static(path.join(__dirname, "client/dist")));
 
 app.use(cors({
-  origin: "https://frontend-siqx.onrender.com",
+  origin: ["https://frontend-siqx.onrender.com",
+    "https://phenomenal-brigadeiros-1f01bc.netlify.app/",
+    "http://localhost:5173/"
+  ],
+
   credentials: true
 }))
 
